@@ -9,6 +9,9 @@ router.get("/", (req, res) => {
   db.getAllBookmarks().then(results => {
     res.json(results)
   })
+  .catch(err => {
+    console.log('ERROR', err)
+  })
 });
 
 // get bookmark by title
